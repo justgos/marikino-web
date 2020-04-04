@@ -6,8 +6,8 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "predeploy": "next build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "next build && next export && touch out/.nojekyll",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
