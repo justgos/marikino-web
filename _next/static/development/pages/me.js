@@ -6756,6 +6756,22 @@ var AboutPage = function AboutPage() {
       lineNumber: 15,
       columnNumber: 7
     }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    className: "me-photo",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 9
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    className: "social-icons",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
     href: "https://www.behance.net/marikino",
     target: "_blank",
@@ -6764,15 +6780,15 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 9
+      lineNumber: 19,
+      columnNumber: 11
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 114
+      lineNumber: 19,
+      columnNumber: 116
     }
   })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
     href: "https://dribbble.com/marikino",
@@ -6782,15 +6798,15 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
+      lineNumber: 20,
+      columnNumber: 11
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 117
+      lineNumber: 20,
+      columnNumber: 119
     }
   })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
     href: "https://www.instagram.com/marikinoo/",
@@ -6800,15 +6816,15 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
+      lineNumber: 21,
+      columnNumber: 11
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 121
+      lineNumber: 21,
+      columnNumber: 123
     }
   })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
     href: "mailto:kinovych@gmail.com",
@@ -6818,24 +6834,24 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 9
+      lineNumber: 22,
+      columnNumber: 11
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 110
+      lineNumber: 22,
+      columnNumber: 112
     }
-  }))));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AboutPage);
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fme&absolutePagePath=%2Fmnt%2Fc%2F_code%2Fmarikino-web%2Fpages%2Fme.tsx ***!
   \*********************************************************************************************************************/
@@ -6858,5 +6874,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=me.js.map
