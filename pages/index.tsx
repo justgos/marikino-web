@@ -1,15 +1,26 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from 'next/link';
+
+import './index.scss';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+  <>
+    <div className="index-container">
+      <div className="eye-container">
+        <div className="logo" />
+        
+        <Link href="/raster"><a>
+          <div
+            className="eye-raster"
+          />
+        </a></Link>
+        <Link href="/vector"><a>
+          <div
+            className="eye-vector"
+          />
+        </a></Link>
+      </div>
+    </div>
+  </>
+);
 
-export default IndexPage
+export default IndexPage;
