@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 
@@ -7,6 +7,8 @@ interface Props {
 }
 
 const Nav = ({ page } : Props) => {
+  const [ open, setOpen ] = useState(false);
+
   const menuItems = [
     { value: 'raster', label: 'raster' },
     { value: 'vector', label: 'vector' },
@@ -15,13 +17,17 @@ const Nav = ({ page } : Props) => {
   ];
 
   return (
-    <nav>
-      <div className="container">
-        <div className="floater">
-          <Link href={`/`}>
-            <a><div className="logo" /></a>
-          </Link>
+    <nav className={classNames({ open })}>
+      <div className="container">      
+        <div className="toggle-nav" onClick={evt => setOpen(!open)} />
 
+        <Link href={`/`}>
+          <a><div className="logo" /></a>
+        </Link>
+
+        <div className="floater">
+          <div className="toggle-nav" onClick={evt => setOpen(!open)} />
+          
           <ul>
             {menuItems.map((item, i) =>
               <li key={i}>

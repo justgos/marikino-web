@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+@import '~include-media/dist/_include-media.scss';
+$breakpoints: (phone: 768px, laptop: 1024px, desktop: 1378px);
 
 * {
   margin: 0;
@@ -9,6 +12,10 @@
 body {
   font-family: 'Open Sans';
   font-size: 16px;
+
+  @include media("<=phone") {
+    padding-top: 60px;
+  }
 }
 
 a {
@@ -22,19 +29,78 @@ nav {
   height: 60px;
   // padding: 20px;
   // margin-bottom: 20px;
+  z-index: 1000;
 
-  .floater {
-    position: absolute;
-    left: -90px;
-    top: 20px;
+  @include media("<=phone") {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .toggle-nav {
+    display: none;
+
+    @include media("<=phone") {
+      display: block;
+      float: right;
+      margin-right: 15px;
+      margin-top: 15px;
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+      border-radius: 100%;
+      cursor: pointer;
+    }
   }
   
   .logo {
+    position: absolute;
+    left: -90px;
+    top: 20px;
     width: 128px;
     height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(/img/elements/logo.png);
+
+    @include media("<=phone") {
+      position: relative;
+      left: 10px;
+      top: 10px;
+      // margin-left: 10px;
+      // margin-top: 10px;
+    }
+  }
+
+  .floater {
+    position: absolute;
+    left: -90px;
+    top: 80px;
+
+    @include media("<=phone") {
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 100;
+      background: #fff;
+      box-shadow: none;
+      transition: left  .25s ease-in-out;
+    }
+  }
+
+  @include media("<=phone") {
+    &.open {
+      .floater {
+        left: 0;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 
   ul {
@@ -43,16 +109,32 @@ nav {
     // top: 70px;
     display: block;
     float: left;
-    margin-top: 20px;
+    // margin-top: 20px;
     list-style-type: none;
 
+    @include media("<=phone") {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 60px;
+    }
+
     li {
+      @include media("<=phone") {
+        margin: 10px 0;
+      }
+
       a {
         display: block;
         padding: 4px 0;
         font-size: 18px;
+        font-weight: 300;
         color: #000;
         text-decoration: none;
+
+        @include media("<=phone") {
+          font-size: 22px;
+        }
 
         &:hover {
           span {
@@ -127,6 +209,10 @@ nav {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .works-container {
@@ -158,6 +244,11 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(/img/me.jpg);
+
+  @include media("<=phone") {
+    width: 256px;
+    height: 256px;
+  }
 }
 
 .social-icons {
