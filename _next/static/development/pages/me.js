@@ -27,6 +27,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Nav = function Nav(_ref) {
   var page = _ref.page;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      open = _useState[0],
+      setOpen = _useState[1];
+
   var menuItems = [{
     value: 'raster',
     label: 'raster'
@@ -41,10 +46,13 @@ var Nav = function Nav(_ref) {
     label: 'me'
   }];
   return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("nav", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()({
+      open: open
+    }),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 20,
       columnNumber: 5
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
@@ -52,45 +60,67 @@ var Nav = function Nav(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 21,
       columnNumber: 7
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
-    className: "floater",
+    className: "toggle-nav",
+    onClick: function onClick(evt) {
+      return setOpen(!open);
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 9
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 11
+      lineNumber: 24,
+      columnNumber: 9
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 13
+      lineNumber: 25,
+      columnNumber: 11
     }
   }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
     className: "logo",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 16
+      lineNumber: 25,
+      columnNumber: 14
     }
-  }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("ul", {
+  }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    className: "floater",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    className: "toggle-nav",
+    onClick: function onClick(evt) {
+      return setOpen(!open);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 11
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("ul", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, menuItems.map(function (item, i) {
@@ -99,7 +129,7 @@ var Nav = function Nav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27,
+        lineNumber: 33,
         columnNumber: 15
       }
     }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -107,7 +137,7 @@ var Nav = function Nav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 34,
         columnNumber: 17
       }
     }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
@@ -117,14 +147,14 @@ var Nav = function Nav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 35,
         columnNumber: 19
       }
     }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["jsx"])("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 35,
         columnNumber: 78
       }
     }, item.label))));
