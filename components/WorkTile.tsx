@@ -43,14 +43,23 @@ const WorkTile = ({ path, size, aspectRatio, idx, width } : Props) => {
         ref={baseImgRef}
         className="work"
         css={css`
-          // width: calc(${width * 100}% - ${idx === 0 ? 0 : 20}px);
-          width: ${width * 100}%;
-          padding-top: ${1.0 / aspectRatio * 100 * width}%;
+          width: ${width['desktop'] * 100}%;
+          padding-top: ${1.0 / aspectRatio * 100 * width['desktop']}%;
           background-image: url(${path});
           margin-left: ${idx === 0 ? 0 : ImageGap}px;
           visibility: ${active ? 'hidden' : 'visible'};
 
-          @media (max-width: 1024px) {
+          @media (max-width: 1366px) {
+            width: ${width['laptop'] * 100}%;
+            padding-top: ${1.0 / aspectRatio * 100 * width['laptop']}%;
+          }
+          
+          @media (max-width: 1200px) {
+            width: ${width['tablet'] * 100}%;
+            padding-top: ${1.0 / aspectRatio * 100 * width['tablet']}%;
+          }
+
+          @media (max-width: 768px) {
             width: 100%;
             padding-top: ${1.0 / aspectRatio * 100}%;
             margin-left: 0;
@@ -65,7 +74,7 @@ const WorkTile = ({ path, size, aspectRatio, idx, width } : Props) => {
           onClick={evt => zoomOut()}
           css={css`
             transition: all ${zoomDuration / 1000}s ease-in-out;
-            opacity: ${zoomed ? 0.2 : 0.0};
+            opacity: ${zoomed ? 0.7 : 0.0};
           `}
         />
         <div
@@ -79,6 +88,11 @@ const WorkTile = ({ path, size, aspectRatio, idx, width } : Props) => {
             width: ${zoomed ? '80vw' : `${(baseImgRef.current?.getBoundingClientRect().width || 0)}px`};
             height: ${zoomed ? '80vh' : `${(baseImgRef.current?.getBoundingClientRect().height || 0)}px`};
             background-image: url(${path});
+
+            @media (max-width: 768px) {
+              width: 100%;
+              height: 90%;
+            }
           `}
         />
       </>

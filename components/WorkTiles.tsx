@@ -16,7 +16,7 @@ export interface IWorkTile {
   size : number[];
   aspectRatio : number;
   idx : number;
-  width : number;
+  width : { [device : string] : number };
 };
 
 interface Props {
@@ -25,16 +25,20 @@ interface Props {
   aspectRatioPerRow? : number;
 };
 
-export const ContainerWidth = 1140;
+export const ContainerWidths : { [device : string] : number } = {
+  'desktop': 1140,
+  'laptop': 900,
+  'tablet': 700,
+};
 export const ImageGap = 20;
 
 const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
-  const workTiles = useMemo(
+  const workTiles : IWorkTile[] = useMemo(
     () => works.map(w => ({
       ...w,
       aspectRatio: w.size[0] / w.size[1],
       idx: -1,
-      width: 0,
+      width: {},
       path: rootPath + w.path,
     })),
     [rootPath, works]
@@ -53,7 +57,9 @@ const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
       tiledWorks.push(...currentRow.map((w, j) => ({
         ...w,
         idx: j,
-        width: w.aspectRatio / currentRowAspectRatioSum * ContainerWidth / (ContainerWidth + (currentRow.length - 1) * (ImageGap + 1)),
+        width: Object.keys(ContainerWidths)
+          .map(device => [ device, w.aspectRatio / currentRowAspectRatioSum * ContainerWidths[device] / (ContainerWidths[device] + (currentRow.length - 1) * (ImageGap + 2)) ])
+          .reduce((obj : any, x) => ({ ...obj, [x[0]]: x[1] }), {}),
       })));
       currentRow = [];
     }

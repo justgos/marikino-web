@@ -19,13 +19,24 @@ const AboutPage = () => {
 
         <div className="social-icons">
           <a href="https://www.behance.net/marikino" target="_blank" rel="noopener noreferrer" className="icon-be"><div /></a>
-          <a href="https://dribbble.com/marikino" target="_blank" rel="noopener noreferrer" className="icon-dribbble"><div /></a>
           <a href="https://www.instagram.com/marikinoo/" target="_blank" rel="noopener noreferrer" className="icon-insta"><div /></a>
+          <a href="https://dribbble.com/marikino" target="_blank" rel="noopener noreferrer" className="icon-dribbble"><div /></a>
           <a href="mailto:kinovych@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-gmail"><div /></a>
         </div>
 
         <div className="bio">
-          In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+          Hi! My name is Mari Kinovych, and I am an illustrator.<br/>
+          I live and work in Kyiv, Ukraine.<br/>
+          <br/>
+          This is my second attempt to become a proper freelancer. Before this I worked as an illustrator in motion design studio, where I loved to draw in vector and found out how to work with animation at all.<br/>
+          <br/>
+          I love my job and consider myself a happy person, though it doesn't mean that I am not frustrated sometimes. I like this kind of freedom, when you can be different with every new illustration, but also I love some boring technical tasks where you don't need to be creative.<br/>
+          <br/>
+          I work with different clients and tasks. My favorites are illustrations for some editorial/social media purposes and books. My commercial projects are on <a href="https://www.behance.net/marikino" target="_blank" rel="noopener noreferrer">behance</a>.<br/>
+          <br/>
+          Besides work I have a lot fun with my dog, like to cook (but not everyday), do yoga, plant my balcony with succulents and find pleasure in watching paintings of Old Masters. I spend too much time in social media and want to practice more analogue graphics, but not today &gt;&lt;<br/>
+          <br/>
+          Hope you are enjoying my illustration space and if you have any questions, you can easily reach me on social media. 
         </div>
       </div>
     </>
