@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 @import '~include-media/dist/_include-media.scss';
-$breakpoints: (phone: 768px, laptop: 1024px, desktop: 1378px);
+$breakpoints: (phone: 768px, tablet: 1024px, desktop: 1378px);
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ body {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     padding-top: 60px;
   }
 }
@@ -31,7 +31,7 @@ nav {
   // margin-bottom: 20px;
   z-index: 1000;
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     position: fixed;
     top: 0;
     background: #fff;
@@ -45,7 +45,7 @@ nav {
   .toggle-nav {
     display: none;
 
-    @include media("<=phone") {
+    @include media("<=tablet") {
       display: block;
       float: right;
       margin-right: 15px;
@@ -68,7 +68,7 @@ nav {
     background-repeat: no-repeat;
     background-image: url(/img/elements/logo.png);
 
-    @include media("<=phone") {
+    @include media("<=tablet") {
       position: relative;
       left: 10px;
       top: 10px;
@@ -82,7 +82,7 @@ nav {
     left: -90px;
     top: 80px;
 
-    @include media("<=phone") {
+    @include media("<=tablet") {
       left: -100%;
       top: 0;
       width: 100%;
@@ -94,7 +94,7 @@ nav {
     }
   }
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     &.open {
       .floater {
         left: 0;
@@ -112,7 +112,7 @@ nav {
     // margin-top: 20px;
     list-style-type: none;
 
-    @include media("<=phone") {
+    @include media("<=tablet") {
       float: none;
       width: 100%;
       text-align: center;
@@ -120,7 +120,7 @@ nav {
     }
 
     li {
-      @include media("<=phone") {
+      @include media("<=tablet") {
         margin: 10px 0;
       }
 
@@ -132,7 +132,7 @@ nav {
         color: #000;
         text-decoration: none;
 
-        @include media("<=phone") {
+        @include media("<=tablet") {
           font-size: 22px;
         }
 
@@ -164,7 +164,7 @@ nav {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     width: fit-content;
   }
 
@@ -190,7 +190,7 @@ nav {
   background-repeat: no-repeat;
   background-position: left center;
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     width: 128px;
     height: 128px;
   }
@@ -213,7 +213,7 @@ nav {
   background-image: url(/img/elements/vector_eye_atlas.svg);
   // background-image: url(/img/elements/vector_eye_closed.svg);
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     margin-left: 20px;
   }
 
@@ -225,11 +225,15 @@ nav {
 
 .container {
   position: relative;
-  width: 1200px;
+  width: 1140px;
   margin-left: auto;
   margin-right: auto;
 
-  @include media("<=phone") {
+  // @include media("<=desktop") {
+  //   width: 1000px;
+  // }
+
+  @include media("<=tablet") {
     width: 100%;
   }
 }
@@ -240,7 +244,7 @@ nav {
   flex-direction: row;
   padding-bottom: 20px;
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     padding-bottom: 0;
   }
 
@@ -287,7 +291,7 @@ nav {
   background-repeat: no-repeat;
   background-image: url(/img/me.jpg);
 
-  @include media("<=phone") {
+  @include media("<=tablet") {
     width: 256px;
     height: 256px;
   }
