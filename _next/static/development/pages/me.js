@@ -7480,10 +7480,10 @@ var AboutPage = function AboutPage() {
       columnNumber: 119
     }
   })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
-    href: "mailto:kinovych@gmail.com",
+    href: "https://www.facebook.com/mari.kinovych",
     target: "_blank",
     rel: "noopener noreferrer",
-    className: "icon-gmail",
+    className: "icon-fb",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -7495,6 +7495,24 @@ var AboutPage = function AboutPage() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24,
+      columnNumber: 122
+    }
+  })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
+    href: "mailto:kinovych@gmail.com",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: "icon-gmail",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 11
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
       columnNumber: 112
     }
   }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
@@ -7502,56 +7520,56 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 9
     }
   }, "Hi! My name is Mari Kinovych, and I am an illustrator.", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 65
     }
   }), "I live and work in Kyiv, Ukraine.", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 44
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 11
     }
   }), "This is my second attempt to become a proper freelancer. Before this I worked as an illustrator in motion design studio, where I loved to draw in vector and found out how to work with animation at all.", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 212
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 11
     }
   }), "I love my job and consider myself a happy person, though it doesn't mean that I am not frustrated sometimes. I like this kind of freedom, when you can be different with every new illustration, but also I love some boring technical tasks where you don't need to be creative.", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 284
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 35,
       columnNumber: 11
     }
   }), "I work with different clients and tasks. My favorites are illustrations for some editorial/social media purposes and books. My commercial projects are on ", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
@@ -7561,38 +7579,63 @@ var AboutPage = function AboutPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 165
     }
   }, "behance"), ".", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 262
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 37,
       columnNumber: 11
     }
   }), "Besides work I have a lot fun with my dog, like to cook (but not everyday), do yoga, plant my balcony with succulents and find pleasure in watching paintings of Old Masters. I spend too much time in social media and want to practice more analogue graphics, but not today ><", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 38,
       columnNumber: 290
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 39,
       columnNumber: 11
     }
-  }), "Hope you are enjoying my illustration space and if you have any questions, you can easily reach me on social media.")));
+  }), "Hope you are enjoying my illustration space!", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 55
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 11
+    }
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+    style: {
+      width: '100%',
+      textAlign: 'center'
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 11
+    }
+  }, "\u2764"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AboutPage);
