@@ -6,10 +6,12 @@ import { jsx, css } from '@emotion/core';
 
 import './index.scss';
 import Nav from '../components/Nav';
+import Header from '../components/Header';
 
 const AboutPage = () => {
   return (
     <>
+      <Header />
       <Nav page="me" />
 
       <div className="container">
@@ -20,6 +22,10 @@ const AboutPage = () => {
           <a href="https://dribbble.com/marikino" target="_blank" rel="noopener noreferrer" className="icon-dribbble"><div /></a>
           <a href="https://www.instagram.com/marikinoo/" target="_blank" rel="noopener noreferrer" className="icon-insta"><div /></a>
           <a href="mailto:kinovych@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-gmail"><div /></a>
+        </div>
+
+        <div className="bio">
+          In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
         </div>
       </div>
     </>

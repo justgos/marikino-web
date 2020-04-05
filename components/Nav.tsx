@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import classNames from 'classnames';
 
 interface Props {
@@ -17,29 +18,31 @@ const Nav = ({ page } : Props) => {
   ];
 
   return (
-    <nav className={classNames({ open })}>
-      <div className="container">      
-        <div className="toggle-nav" onClick={evt => setOpen(!open)} />
+    <>
+      <nav className={classNames({ open })}>
+        <div className="container">      
+          <div className="open-nav" onClick={evt => setOpen(!open)} />
 
-        <Link href={`/`}>
-          <a><div className="logo" /></a>
-        </Link>
+          <Link href={`/`}>
+            <a><div className="logo" /></a>
+          </Link>
 
-        <div className="floater">
-          <div className="toggle-nav" onClick={evt => setOpen(!open)} />
-          
-          <ul>
-            {menuItems.map((item, i) =>
-              <li key={i}>
-                <Link href={`/${item.value}`}>
-                  <a className={classNames({ active: item.value === page })}><span>{item.label}</span></a>
-                </Link>
-              </li>
-            )}
-          </ul>
+          <div className="floater">
+            <div className="close-nav" onClick={evt => setOpen(!open)} />
+            
+            <ul>
+              {menuItems.map((item, i) =>
+                <li key={i}>
+                  <Link href={`/${item.value}`}>
+                    <a className={classNames({ active: item.value === page })}><span>{item.label}</span></a>
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

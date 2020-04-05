@@ -7,6 +7,7 @@ import { jsx, css } from '@emotion/core';
 import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
+import Header from '../components/Header';
 
 const SketchPage = () => {
   const works = [
@@ -26,6 +27,7 @@ const SketchPage = () => {
 
   return (
     <>
+      <Header />
       <Nav page="sketch" />
 
       <WorkTiles rootPath="/img/sketch/" works={works} aspectRatioPerRow={2.1} />

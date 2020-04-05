@@ -7,6 +7,7 @@ import { jsx, css } from '@emotion/core';
 import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
+import Header from '../components/Header';
 
 const RasterPage = () => {
   const works = [
@@ -33,6 +34,7 @@ const RasterPage = () => {
 
   return (
     <>
+      <Header />
       <Nav page="raster" />
 
       <WorkTiles rootPath="/img/raster/" works={works} />
