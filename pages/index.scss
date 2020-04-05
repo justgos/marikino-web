@@ -10,7 +10,7 @@ $breakpoints: (phone: 768px, laptop: 1024px, desktop: 1378px);
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
 
   @include media("<=phone") {
@@ -164,6 +164,10 @@ nav {
   top: 50%;
   transform: translate(-50%, -50%);
 
+  @include media("<=phone") {
+    width: fit-content;
+  }
+
   .logo {
     position: absolute;
     left: 50%;
@@ -182,25 +186,40 @@ nav {
   display: inline-block;
   width: 256px;
   height: 256px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: left center;
+
+  @include media("<=phone") {
+    width: 128px;
+    height: 128px;
+  }
+
+  &:hover {
+    background-position: right center;
+  }
 }
 
 .eye-raster {
-  background-image: url(/img/elements/raster_eye_closed.png);
+  background-image: url(/img/elements/raster_eye_atlas.png);
+  // background-image: url(/img/elements/raster_eye_closed.png);
 
-  &:hover {
-    background-image: url(/img/elements/raster_eye_open.png);
-  }
+  // &:hover {
+  //   background-image: url(/img/elements/raster_eye_open.png);
+  // }
 }
 .eye-vector {
   margin-left: 40px;
+  background-image: url(/img/elements/vector_eye_atlas.svg);
+  // background-image: url(/img/elements/vector_eye_closed.svg);
 
-  background-image: url(/img/elements/vector_eye_closed.svg);
-
-  &:hover {
-    background-image: url(/img/elements/vector_eye_open.svg);
+  @include media("<=phone") {
+    margin-left: 20px;
   }
+
+  // &:hover {
+  //   background-image: url(/img/elements/vector_eye_open.svg);
+  // }
 }
 
 
@@ -221,16 +240,39 @@ nav {
   flex-direction: row;
   padding-bottom: 20px;
 
+  @include media("<=phone") {
+    padding-bottom: 0;
+  }
+
   .work {
     display: block;
     margin-top: 20px;
+    cursor: pointer;
 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
 
     &.round {
       border-radius: 100%;
     }
+  }
+
+  .zoomed-work-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 10000;
+  }
+  .zoomed-work {
+    position: fixed;
+    z-index: 10001;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 

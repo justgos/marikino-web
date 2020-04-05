@@ -25,12 +25,7 @@ const VectorPage = () => {
     { path: 'krupa_illustrations_1.jpg', size: [ 1500, 1500 ] },
     { path: 'krupa_illustrations_2.jpg', size: [ 1500, 1500 ] },
     { path: 'krupa_illustrations_3.jpg', size: [ 1500, 1500 ] },
-  ].map(w => ({
-    ...w,
-    aspectRatio: w.size[0] / w.size[1],
-    idx: -1,
-    width: 0,
-  }));
+  ];
 
   return (
     <>

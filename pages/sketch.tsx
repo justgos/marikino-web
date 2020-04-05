@@ -22,12 +22,7 @@ const SketchPage = () => {
     { path: 'watermaloon.jpg', size: [ 1500, 1500 ] },
     { path: 'wok.jpg', size: [ 2048, 2048 ] },
     { path: 'Productivity_.jpg', size: [ 2048, 2048 ] },
-  ].map(w => ({
-    ...w,
-    aspectRatio: w.size[0] / w.size[1],
-    idx: -1,
-    width: 0,
-  }));
+  ];
 
   return (
     <>
