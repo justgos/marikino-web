@@ -29,12 +29,7 @@ const RasterPage = () => {
     { path: 'relationshit.jpg', size: [ 1920, 1005 ] },
     { path: 'tvitter.jpg', size: [ 3000, 3000 ] },
     { path: 'water-plastic.jpg', size: [ 1500, 1500 ] },
-  ].map(w => ({
-    ...w,
-    aspectRatio: w.size[0] / w.size[1],
-    idx: -1,
-    width: 0,
-  }));
+  ];
 
   return (
     <>

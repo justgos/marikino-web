@@ -1,0 +1,90 @@
+import React, { useRef, useMemo, useState, useCallback } from 'react';
+import Link from 'next/link';
+import classNames from 'classnames';
+import _ from 'lodash';
+import { jsx, css } from '@emotion/core';
+
+import { IWorkTile, ImageGap } from './WorkTiles';
+
+interface Props extends IWorkTile {
+  //
+};
+
+const WorkTile = ({ path, size, aspectRatio, idx, width } : Props) => {
+  const baseImgRef = useRef<HTMLDivElement>(null);
+  const [ active, setActive ] = useState(false);
+  const [ zoomed, setZoomed ] = useState(false);
+  
+  const ESCAPE_KEY = 27;
+  const zoomDuration = 250;
+  function zoomOutOnEscape(evt : KeyboardEvent) {
+    if(evt.keyCode === ESCAPE_KEY)
+      zoomOut();
+  };
+  const zoomIn = () => {
+    // if(active)
+    //   return;
+    setActive(true);
+    setTimeout(() => setZoomed(true), 10);
+    document.addEventListener("keydown", zoomOutOnEscape);
+  };
+  
+  const zoomOut = () => {
+    // if(!active)
+    //   return;
+    setZoomed(false);
+    setTimeout(() => setActive(false), zoomDuration);
+    document.removeEventListener("keydown", zoomOutOnEscape);
+  };
+
+  return (
+    <>
+      <div
+        ref={baseImgRef}
+        className="work"
+        css={css`
+          // width: calc(${width * 100}% - ${idx === 0 ? 0 : 20}px);
+          width: ${width * 100}%;
+          padding-top: ${1.0 / aspectRatio * 100 * width}%;
+          background-image: url(${path});
+          margin-left: ${idx === 0 ? 0 : ImageGap}px;
+          visibility: ${active ? 'hidden' : 'visible'};
+
+          @media (max-width: 768px) {
+            width: 100%;
+            padding-top: ${1.0 / aspectRatio * 100}%;
+            margin-left: 0;
+          }
+        `}
+        onClick={evt => zoomIn()}
+      />
+      {active &&
+      <>
+        <div
+          className={classNames("zoomed-work-background")}
+          onClick={evt => zoomOut()}
+          css={css`
+            transition: all ${zoomDuration / 1000}s ease-in-out;
+            opacity: ${zoomed ? 0.2 : 0.0};
+          `}
+        />
+        <div
+          className={classNames("zoomed-work", { zoomed })}
+          onClick={evt => zoomOut()}
+          css={css`
+            transition: all ${zoomDuration / 1000}s ease-in-out;
+            left: ${zoomed ? '50%' : `${((baseImgRef.current?.getBoundingClientRect().left || 0) + (baseImgRef.current?.getBoundingClientRect().width || 0) / 2)}px`};
+            top: ${zoomed ? '50%' : `${((baseImgRef.current?.getBoundingClientRect().top || 0) + (baseImgRef.current?.getBoundingClientRect().height || 0) / 2)}px`};
+            transform: translate(-50%, -50%);
+            width: ${zoomed ? '80vw' : `${(baseImgRef.current?.getBoundingClientRect().width || 0)}px`};
+            height: ${zoomed ? '80vh' : `${(baseImgRef.current?.getBoundingClientRect().height || 0)}px`};
+            background-image: url(${path});
+          `}
+        />
+      </>
+      }
+    </>
+  );
+};
+
+export default WorkTile; 

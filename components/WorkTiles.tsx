@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { jsx, css } from '@emotion/core';
 
-interface Work {
+import WorkTile from './WorkTile';
+
+interface IWork {
+  path : string;
+  size : number[];
+};
+
+export interface IWorkTile {
   path : string;
   size : number[];
   aspectRatio : number;
@@ -14,29 +21,43 @@ interface Work {
 
 interface Props {
   rootPath : string;
-  works : Work[];
+  works : IWork[];
   aspectRatioPerRow? : number;
 };
 
+export const ContainerWidth = 1200;
+export const ImageGap = 20;
+
 const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
+  const workTiles = useMemo(
+    () => works.map(w => ({
+      ...w,
+      aspectRatio: w.size[0] / w.size[1],
+      idx: -1,
+      width: 0,
+      path: rootPath + w.path,
+    })),
+    [rootPath, works]
+  );
+
   const tiledWorks : any[] = [];
   let currentRow : any[] = [];
   
-  works.forEach((work, i) => {
+  workTiles.forEach((work, i) => {
     let currentRowAspectRatioSum = currentRow.reduce((a, b) => a + b.aspectRatio, 0);
-    if(i === works.length - 1)
+    if(i === workTiles.length - 1)
       currentRow.push(work);
-    if(currentRowAspectRatioSum + work.aspectRatio > aspectRatioPerRow || i === works.length - 1) {
+    if(currentRowAspectRatioSum + work.aspectRatio > aspectRatioPerRow || i === workTiles.length - 1) {
       // The row is complete
       currentRowAspectRatioSum = currentRow.reduce((a, b) => a + b.aspectRatio, 0)
       tiledWorks.push(...currentRow.map((w, j) => ({
         ...w,
         idx: j,
-        width: w.aspectRatio / currentRowAspectRatioSum,
+        width: w.aspectRatio / currentRowAspectRatioSum * ContainerWidth / (ContainerWidth + (currentRow.length - 1) * (ImageGap + 1)),
       })));
       currentRow = [];
     }
-    if(i < works.length - 1) {
+    if(i < workTiles.length - 1) {
       currentRow.push(work);
     }
   });
@@ -45,21 +66,9 @@ const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
     <>
       <div className="container works-container">
         {tiledWorks.map((work, i) =>
-          <div
+          <WorkTile
             key={i}
-            className="work"
-            css={css`
-              width: calc(${work.width * 100}% - ${work.idx === 0 ? 0 : 20}px);
-              padding-top: ${1.0 / work.aspectRatio * 100 * work.width}%;
-              background-image: url(${rootPath + work.path});
-              margin-left: ${work.idx === 0 ? 0 : 20}px;
-
-              @media (max-width: 767px) {
-                width: 100%;
-                padding-top: ${1.0 / work.aspectRatio * 100}%;
-                margin-left: 0;
-              }
-            `}
+            {...work}
           />
         )}
       </div>
