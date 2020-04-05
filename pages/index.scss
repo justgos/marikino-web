@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 @import '~include-media/dist/_include-media.scss';
-$breakpoints: (phone: 768px, tablet: 1024px, desktop: 1378px);
+$breakpoints: (phone: 1024px, tablet: 1200px, desktop: 1378px);
 
 * {
   margin: 0;
@@ -40,6 +40,10 @@ nav {
 
   .container {
     height: 100%;
+
+    @include media("<=tablet") {
+      width: 100%;
+    }
   }
 
   .toggle-nav {
@@ -233,7 +237,7 @@ nav {
   //   width: 1000px;
   // }
 
-  @include media("<=tablet") {
+  @include media("<=phone") {
     width: 100%;
   }
 }
@@ -244,7 +248,7 @@ nav {
   flex-direction: row;
   padding-bottom: 20px;
 
-  @include media("<=tablet") {
+  @include media("<=phone") {
     padding-bottom: 0;
   }
 
@@ -291,7 +295,7 @@ nav {
   background-repeat: no-repeat;
   background-image: url(/img/me.jpg);
 
-  @include media("<=tablet") {
+  @include media("<=phone") {
     width: 256px;
     height: 256px;
   }
