@@ -213,7 +213,13 @@ nav {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px; }
+  margin-top: 10px; }
+
+.bio {
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px; }
 
 .icon-be {
   display: inline-block; }
