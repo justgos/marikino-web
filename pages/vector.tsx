@@ -7,6 +7,7 @@ import { jsx, css } from '@emotion/core';
 import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
+import Header from '../components/Header';
 
 const VectorPage = () => {
   const works = [
@@ -29,6 +30,7 @@ const VectorPage = () => {
 
   return (
     <>
+      <Header />
       <Nav page="vector" />
 
       <WorkTiles rootPath="/img/vector/" works={works} />
