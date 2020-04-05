@@ -50,7 +50,7 @@ const WorkTile = ({ path, size, aspectRatio, idx, width } : Props) => {
           margin-left: ${idx === 0 ? 0 : ImageGap}px;
           visibility: ${active ? 'hidden' : 'visible'};
 
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             width: 100%;
             padding-top: ${1.0 / aspectRatio * 100}%;
             margin-left: 0;

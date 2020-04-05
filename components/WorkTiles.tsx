@@ -25,7 +25,7 @@ interface Props {
   aspectRatioPerRow? : number;
 };
 
-export const ContainerWidth = 1200;
+export const ContainerWidth = 1140;
 export const ImageGap = 20;
 
 const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
