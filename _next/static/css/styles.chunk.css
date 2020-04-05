@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px; }
   @media (max-width: 768px) {
     body {
@@ -110,6 +110,9 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
+  @media (max-width: 768px) {
+    .eye-container {
+      width: fit-content; } }
   .eye-container .logo {
     position: absolute;
     left: 50%;
@@ -126,19 +129,27 @@ nav {
   display: inline-block;
   width: 256px;
   height: 256px;
-  background-size: contain;
-  background-repeat: no-repeat; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center; }
+  @media (max-width: 768px) {
+    .eye-raster,
+    .eye-vector {
+      width: 128px;
+      height: 128px; } }
+  .eye-raster:hover,
+  .eye-vector:hover {
+    background-position: right center; }
 
 .eye-raster {
-  background-image: url(/img/elements/raster_eye_closed.png); }
-  .eye-raster:hover {
-    background-image: url(/img/elements/raster_eye_open.png); }
+  background-image: url(/img/elements/raster_eye_atlas.png); }
 
 .eye-vector {
   margin-left: 40px;
-  background-image: url(/img/elements/vector_eye_closed.svg); }
-  .eye-vector:hover {
-    background-image: url(/img/elements/vector_eye_open.svg); }
+  background-image: url(/img/elements/vector_eye_atlas.svg); }
+  @media (max-width: 768px) {
+    .eye-vector {
+      margin-left: 20px; } }
 
 .container {
   position: relative;
@@ -154,13 +165,32 @@ nav {
   flex-wrap: wrap;
   flex-direction: row;
   padding-bottom: 20px; }
+  @media (max-width: 768px) {
+    .works-container {
+      padding-bottom: 0; } }
   .works-container .work {
     display: block;
     margin-top: 20px;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
     .works-container .work.round {
       border-radius: 100%; }
+  .works-container .zoomed-work-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 10000; }
+  .works-container .zoomed-work {
+    position: fixed;
+    z-index: 10001;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 .me-photo {
   width: 400px;
