@@ -6621,7 +6621,7 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 4:
 /*!**********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2F_code%2Fmarikino-web%2Fpages%2Findex.tsx ***!
   \**********************************************************************************************************************/
@@ -6644,5 +6644,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
