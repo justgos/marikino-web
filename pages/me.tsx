@@ -21,6 +21,7 @@ const AboutPage = () => {
           <a href="https://www.behance.net/marikino" target="_blank" rel="noopener noreferrer" className="icon-be"><div /></a>
           <a href="https://www.instagram.com/marikinoo/" target="_blank" rel="noopener noreferrer" className="icon-insta"><div /></a>
           <a href="https://dribbble.com/marikino" target="_blank" rel="noopener noreferrer" className="icon-dribbble"><div /></a>
+          <a href="https://www.facebook.com/mari.kinovych" target="_blank" rel="noopener noreferrer" className="icon-fb"><div /></a>
           <a href="mailto:kinovych@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-gmail"><div /></a>
         </div>
 
@@ -36,7 +37,9 @@ const AboutPage = () => {
           <br/>
           Besides work I have a lot fun with my dog, like to cook (but not everyday), do yoga, plant my balcony with succulents and find pleasure in watching paintings of Old Masters. I spend too much time in social media and want to practice more analogue graphics, but not today &gt;&lt;<br/>
           <br/>
-          Hope you are enjoying my illustration space and if you have any questions, you can easily reach me on social media. 
+          Hope you are enjoying my illustration space!<br/>
+          <br/>
+          <div style={{ width: '100%', textAlign: 'center' }}>❤</div>
         </div>
       </div>
     </>
