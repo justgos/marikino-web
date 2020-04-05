@@ -63,6 +63,8 @@ nav {
         margin-top: 15px;
         width: 30px;
         height: 30px; } }
+  nav a:hover {
+    border: 0; }
   nav .logo {
     display: inline-block;
     position: absolute;
@@ -245,6 +247,8 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px; }
+  .social-icons a:hover {
+    border: 0; }
 
 .bio {
   width: 560px;
@@ -265,14 +269,19 @@ nav {
   .icon-be > div {
     width: 40px;
     height: 40px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .icon-be > div {
+        width: 36px;
+        height: 36px; } }
 
 .icon-be > div {
-  background-image: url(/img/icons/be.png); }
+  background-image: url(/img/icons/be_atlas.png);
+  background-position: left center; }
 
 .icon-be:hover > div {
-  background-image: url(/img/icons/be_black.png); }
+  background-position: right center; }
 
 .icon-dribbble {
   display: inline-block; }
@@ -281,14 +290,19 @@ nav {
   .icon-dribbble > div {
     width: 40px;
     height: 40px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .icon-dribbble > div {
+        width: 36px;
+        height: 36px; } }
 
 .icon-dribbble > div {
-  background-image: url(/img/icons/dribbble.png); }
+  background-image: url(/img/icons/dribbble_atlas.png);
+  background-position: left center; }
 
 .icon-dribbble:hover > div {
-  background-image: url(/img/icons/dribbble_black.png); }
+  background-position: right center; }
 
 .icon-insta {
   display: inline-block; }
@@ -297,14 +311,40 @@ nav {
   .icon-insta > div {
     width: 40px;
     height: 40px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .icon-insta > div {
+        width: 36px;
+        height: 36px; } }
 
 .icon-insta > div {
-  background-image: url(/img/icons/insta.png); }
+  background-image: url(/img/icons/insta_atlas.png);
+  background-position: left center; }
 
 .icon-insta:hover > div {
-  background-image: url(/img/icons/insta_black.png); }
+  background-position: right center; }
+
+.icon-fb {
+  display: inline-block; }
+  .icon-fb:not(:first-child) {
+    margin-left: 15px; }
+  .icon-fb > div {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .icon-fb > div {
+        width: 36px;
+        height: 36px; } }
+
+.icon-fb > div {
+  background-image: url(/img/icons/fb_atlas.png);
+  background-position: left center; }
+
+.icon-fb:hover > div {
+  background-position: right center; }
 
 .icon-gmail {
   display: inline-block; }
@@ -313,14 +353,19 @@ nav {
   .icon-gmail > div {
     width: 40px;
     height: 40px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .icon-gmail > div {
+        width: 36px;
+        height: 36px; } }
 
 .icon-gmail > div {
-  background-image: url(/img/icons/gmail.png); }
+  background-image: url(/img/icons/gmail_atlas.png);
+  background-position: left center; }
 
 .icon-gmail:hover > div {
-  background-image: url(/img/icons/gmail_black.png); }
+  background-position: right center; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
