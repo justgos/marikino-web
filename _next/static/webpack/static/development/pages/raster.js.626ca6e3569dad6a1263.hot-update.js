@@ -76,7 +76,7 @@ var WorkTiles = function WorkTiles(_ref) {
         return _objectSpread({}, w, {
           idx: j,
           width: Object.keys(ContainerWidths).map(function (device) {
-            return [device, w.aspectRatio / currentRowAspectRatioSum * ContainerWidths[device] / (ContainerWidths[device] + (currentRow.length - 1) * (ImageGap + 1))];
+            return [device, w.aspectRatio / currentRowAspectRatioSum * ContainerWidths[device] / (ContainerWidths[device] + (currentRow.length - 1) * (ImageGap + 2))];
           }).reduce(function (obj, x) {
             return _objectSpread({}, obj, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, x[0], x[1]));
           }, {})
@@ -116,4 +116,4 @@ var WorkTiles = function WorkTiles(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=raster.js.28053c7f368b8732c7f0.hot-update.js.map
+//# sourceMappingURL=raster.js.626ca6e3569dad6a1263.hot-update.js.map

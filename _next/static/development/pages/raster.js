@@ -505,7 +505,7 @@ var WorkTiles = function WorkTiles(_ref) {
         return _objectSpread({}, w, {
           idx: j,
           width: Object.keys(ContainerWidths).map(function (device) {
-            return [device, w.aspectRatio / currentRowAspectRatioSum * ContainerWidths[device] / (ContainerWidths[device] + (currentRow.length - 1) * (ImageGap + 1))];
+            return [device, w.aspectRatio / currentRowAspectRatioSum * ContainerWidths[device] / (ContainerWidths[device] + (currentRow.length - 1) * (ImageGap + 2))];
           }).reduce(function (obj, x) {
             return _objectSpread({}, obj, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])({}, x[0], x[1]));
           }, {})
@@ -7899,7 +7899,7 @@ var RasterPage = function RasterPage() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fraster&absolutePagePath=%2Fmnt%2Fc%2F_code%2Fmarikino-web%2Fpages%2Fraster.tsx ***!
   \*****************************************************************************************************************************/
@@ -7922,5 +7922,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=raster.js.map
