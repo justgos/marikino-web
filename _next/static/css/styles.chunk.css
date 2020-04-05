@@ -207,8 +207,8 @@ nav {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
-    background-color: #000;
+    bottom: -100%;
+    background-color: #fff;
     z-index: 10000; }
   .works-container .zoomed-work {
     position: fixed;
