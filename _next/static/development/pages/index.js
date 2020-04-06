@@ -133,6 +133,217 @@ var Header = function Header(_ref) {
 
 /***/ }),
 
+/***/ "./components/react-accelerometer.js":
+/*!*******************************************!*\
+  !*** ./components/react-accelerometer.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+
+var _assertThisInitialized = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+
+var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/**
+ * @usage
+ *    <ReactAccelerometer useGravity multiplier={3}>
+ *      {(position, rotation) => (
+ *        <div style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)`}}>
+ *          Hello there
+ *        </div>
+ *      )}
+ *    </ReactAccelerometer>
+ */
+
+
+var ReactAccelerometer = /*#__PURE__*/function (_React$Component) {
+  "use strict";
+
+  _inherits(ReactAccelerometer, _React$Component);
+
+  var _super = _createSuper(ReactAccelerometer);
+
+  function ReactAccelerometer(props) {
+    var _this;
+
+    _classCallCheck(this, ReactAccelerometer);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      x: null,
+      y: null,
+      z: null,
+      rotation: null,
+      landscape: false
+    };
+    _this.handleAcceleration = _this.handleAcceleration.bind(_assertThisInitialized(_this));
+    _this.handleOrientation = _this.handleOrientation.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(ReactAccelerometer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.handleOrientation();
+      console.log("window.DeviceMotionEvent", window.DeviceMotionEvent);
+      console.log("window.addEventListener('devicemotion', this.handleAcceleration)");
+      window.addEventListener('devicemotion', this.handleAcceleration);
+      window.addEventListener('orientationchange', this.handleOrientation);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('devicemotion', this.handleAcceleration);
+      window.removeEventListener('orientationchange', this.handleOrientation);
+    }
+  }, {
+    key: "handleOrientation",
+    value: function handleOrientation(event) {
+      console.log('handleOrientation', event);
+      var _window = window,
+          orientation = _window.orientation;
+      this.setState({
+        landscape: orientation === 90 || orientation === -90
+      });
+    }
+  }, {
+    key: "handleAcceleration",
+    value: function handleAcceleration(event) {
+      console.log('handleAcceleration', event);
+      var landscape = this.state.landscape;
+      var _this$props = this.props,
+          useGravity = _this$props.useGravity,
+          multiplier = _this$props.multiplier;
+      var acceleration = useGravity ? event.accelerationIncludingGravity : event.acceleration;
+      var rotation = event.rotationRate || null;
+      var x = acceleration.x,
+          y = acceleration.y,
+          z = acceleration.z;
+      this.setState({
+        rotation: rotation,
+        x: (landscape ? y : x) * multiplier,
+        y: (landscape ? x : y) * multiplier,
+        z: z * multiplier
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      var _this$state = this.state,
+          x = _this$state.x,
+          y = _this$state.y,
+          z = _this$state.z,
+          rotation = _this$state.rotation;
+      /**
+       * We have to detect if one of the values was ever set by the 'devicemotion' event,
+       * as some browsers implement the API, but the device itself doesn't support.
+       */
+
+      if (x || y || z) {
+        return children({
+          x: x,
+          y: y,
+          z: z
+        }, rotation);
+      }
+
+      return children();
+    }
+  }]);
+
+  return ReactAccelerometer;
+}(React.Component); // ReactAccelerometer.propTypes = {
+//   children: React.PropTypes.func.isRequired,
+//   multiplier: React.PropTypes.number,
+//   useGravity: React.PropTypes.bool
+// }
+
+
+ReactAccelerometer.defaultProps = {
+  multiplier: 1,
+  useGravity: true
+};
+module.exports = ReactAccelerometer;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+module.exports = _assertThisInitialized;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js":
 /*!*****************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js ***!
@@ -146,6 +357,52 @@ __webpack_require__.r(__webpack_exports__);
 function _objectDestructuringEmpty(obj) {
   if (obj == null) throw new TypeError("Cannot destructure undefined");
 }
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inherits;
 
 /***/ }),
 
@@ -163,6 +420,76 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 module.exports = _inheritsLoose;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+module.exports = _setPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
 
 /***/ }),
 
@@ -7145,10 +7472,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./pages/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./components/Header.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
+/* harmony import */ var _components_react_accelerometer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/react-accelerometer */ "./components/react-accelerometer.js");
+/* harmony import */ var _components_react_accelerometer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_react_accelerometer__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./pages/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Header */ "./components/Header.tsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.browser.esm.js");
 var _this = undefined,
     _jsxFileName = "/mnt/c/_code/marikino-web/pages/index.tsx";
 
@@ -7159,92 +7488,127 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 var IndexPage = function IndexPage() {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
-    }
-  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-    className: "index-container",
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
       columnNumber: 5
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-    className: "eye-container",
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+    className: "index-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
-      columnNumber: 7
+      columnNumber: 5
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-    className: "logo",
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+    className: "eye-container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
-      columnNumber: 9
+      columnNumber: 7
     }
-  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/raster",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 9
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("a", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 30
+    }
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+    className: "logo",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
-      columnNumber: 30
-    }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-    className: "eye-raster",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
       columnNumber: 11
     }
-  }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/vector",
+  }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_components_react_accelerometer__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 16,
       columnNumber: 9
     }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 30
-    }
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
-    className: "eye-vector",
+  }, function (accel, rotation) {
+    console.log(accel === null || accel === void 0 ? void 0 : accel.x, accel === null || accel === void 0 ? void 0 : accel.y, accel === null || accel === void 0 ? void 0 : accel.z, rotation);
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_components_react_accelerometer__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 11
+      columnNumber: 9
     }
-  }))))));
+  }, function (accel, rotation) {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/raster",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 13
+      }
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("a", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 34
+      }
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      className: "eye-raster",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 15
+      }
+    }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/vector",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 13
+      }
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("a", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 34
+      }
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      className: "eye-vector",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 15
+      }
+    }))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
 
 /***/ }),
 
-/***/ 1:
+/***/ 5:
 /*!**********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2F_code%2Fmarikino-web%2Fpages%2Findex.tsx ***!
   \**********************************************************************************************************************/
@@ -7267,5 +7631,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
