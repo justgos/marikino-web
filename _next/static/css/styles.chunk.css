@@ -172,8 +172,9 @@ nav {
     .eye-vector {
       width: 128px;
       height: 128px; } }
-  .eye-raster:hover,
-  .eye-vector:hover {
+  .eye-raster:hover, .eye-raster.active,
+  .eye-vector:hover,
+  .eye-vector.active {
     background-position: right center; }
 
 .eye-raster {
