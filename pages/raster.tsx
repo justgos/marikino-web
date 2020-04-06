@@ -8,6 +8,7 @@ import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const RasterPage = () => {
   const works = [
@@ -38,6 +39,8 @@ const RasterPage = () => {
       <Nav page="raster" />
 
       <WorkTiles rootPath="/img/raster/" works={works} />
+
+      <Footer />
     </>
   );
 };

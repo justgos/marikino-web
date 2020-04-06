@@ -8,6 +8,7 @@ import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const VectorPage = () => {
   const works = [
@@ -34,6 +35,8 @@ const VectorPage = () => {
       <Nav page="vector" />
 
       <WorkTiles rootPath="/img/vector/" works={works} />
+
+      <Footer />
     </>
   );
 };
