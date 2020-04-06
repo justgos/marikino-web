@@ -83,8 +83,10 @@ nav {
         top: 10px; } }
   nav .floater {
     position: fixed;
-    left: calc(50vw - 580px - 90px);
-    top: 80px; }
+    left: calc(50vw - 580px - 90px); }
+    @media (min-width: 1201px) {
+      nav .floater.lone {
+        top: 20px; } }
     @media (max-width: 1366px) {
       nav .floater {
         left: calc(50vw - 460px - 90px); } }
@@ -98,7 +100,7 @@ nav {
         z-index: 100;
         background: #fff;
         box-shadow: none;
-        transition: left  .25s ease-in-out; } }
+        transition: left .25s ease-in-out; } }
   @media (max-width: 1200px) {
     nav.open .floater {
       left: 0;
@@ -112,7 +114,7 @@ nav {
         float: none;
         width: 100%;
         text-align: center;
-        margin-top: 50vh;
+        margin-top: 40vh;
         transform: translate(0, -50%); } }
     @media (max-width: 1200px) {
       nav ul li {
@@ -147,7 +149,9 @@ nav {
   transform: translate(-50%, -50%); }
   @media (max-width: 1200px) {
     .eye-container {
-      width: fit-content; } }
+      width: 276px; } }
+  .eye-container a {
+    display: inline-block; }
   .eye-container .logo {
     position: absolute;
     left: 50%;
@@ -269,111 +273,130 @@ nav {
       width: 100%;
       padding-left: 20px;
       padding-right: 20px; } }
+  .bio .heart {
+    width: 28px;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/img/icons/heart.png); }
 
 .icon-be {
   display: inline-block; }
   .icon-be:not(:first-child) {
     margin-left: 15px; }
   .icon-be > div {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .icon-be > div {
-        width: 36px;
-        height: 36px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon-be > div {
   background-image: url(/img/icons/be_atlas.png);
-  background-position: left center; }
+  background-position: right center; }
 
 .icon-be:hover > div {
-  background-position: right center; }
+  background-position: left center; }
 
 .icon-dribbble {
   display: inline-block; }
   .icon-dribbble:not(:first-child) {
     margin-left: 15px; }
   .icon-dribbble > div {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .icon-dribbble > div {
-        width: 36px;
-        height: 36px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon-dribbble > div {
   background-image: url(/img/icons/dribbble_atlas.png);
-  background-position: left center; }
+  background-position: right center; }
 
 .icon-dribbble:hover > div {
-  background-position: right center; }
+  background-position: left center; }
 
 .icon-insta {
   display: inline-block; }
   .icon-insta:not(:first-child) {
     margin-left: 15px; }
   .icon-insta > div {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .icon-insta > div {
-        width: 36px;
-        height: 36px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon-insta > div {
   background-image: url(/img/icons/insta_atlas.png);
-  background-position: left center; }
+  background-position: right center; }
 
 .icon-insta:hover > div {
-  background-position: right center; }
+  background-position: left center; }
 
 .icon-fb {
   display: inline-block; }
   .icon-fb:not(:first-child) {
     margin-left: 15px; }
   .icon-fb > div {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .icon-fb > div {
-        width: 36px;
-        height: 36px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon-fb > div {
   background-image: url(/img/icons/fb_atlas.png);
-  background-position: left center; }
+  background-position: right center; }
 
 .icon-fb:hover > div {
-  background-position: right center; }
+  background-position: left center; }
 
 .icon-gmail {
   display: inline-block; }
   .icon-gmail:not(:first-child) {
     margin-left: 15px; }
   .icon-gmail > div {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .icon-gmail > div {
-        width: 36px;
-        height: 36px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon-gmail > div {
   background-image: url(/img/icons/gmail_atlas.png);
-  background-position: left center; }
+  background-position: right center; }
 
 .icon-gmail:hover > div {
-  background-position: right center; }
+  background-position: left center; }
+
+footer {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  text-align: right;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
