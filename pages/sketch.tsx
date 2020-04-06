@@ -8,6 +8,7 @@ import './index.scss';
 import Nav from '../components/Nav';
 import WorkTiles from '../components/WorkTiles';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const SketchPage = () => {
   const works = [
@@ -31,6 +32,8 @@ const SketchPage = () => {
       <Nav page="sketch" />
 
       <WorkTiles rootPath="/img/sketch/" works={works} aspectRatioPerRow={2.1} />
+
+      <Footer />
     </>
   );
 };

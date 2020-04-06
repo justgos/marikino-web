@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add react-keydown @types/react-keydown
+  /usr/bin/node /usr/bin/yarn add yarn add react-accelerometer @types/react-accelerometer
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_1804.2020.5.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/libnvvp:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/PowerShell/6/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2019.1/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Users/ghost/Anaconda3:/mnt/c/Users/ghost/Anaconda3/Library/mingw-w64/bin:/mnt/c/Users/ghost/Anaconda3/Library/usr/bin:/mnt/c/Users/ghost/Anaconda3/Library/bin:/mnt/c/Users/ghost/Anaconda3/Scripts:/mnt/c/Users/ghost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ghost/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/ghost/AppData/Roaming/npm:/mnt/c/Users/ghost/AppData/Local/Yarn/bin:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-keydown: Not found
+  Error: https://registry.yarnpkg.com/@types%2freact-accelerometer: Not found
       at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66975:18)
       at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140727:22)
       at Request.emit (events.js:321:20)

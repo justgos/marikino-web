@@ -49,6 +49,7 @@ nav {
 
   .container {
     height: 100%;
+    padding: 0;
 
     @include media("<=tablet") {
       width: 100%;
@@ -113,11 +114,21 @@ nav {
   }
 
   .floater {
-    position: absolute;
-    left: -90px;
-    top: 80px;
+    position: fixed;
+    // left: -90px;
+    left: calc(50vw - 580px - 90px);
+    // top: 80px;
 
+    @include media(">tablet") {
+      &.lone {
+        top: 20px;
+      }
+    }
+    @include media("<=laptop") {
+      left: calc(50vw - 460px - 90px);
+    }
     @include media("<=tablet") {
+      position: absolute;
       left: -100%;
       top: 0;
       width: 100%;
@@ -125,7 +136,7 @@ nav {
       z-index: 100;
       background: #fff;
       box-shadow: none;
-      transition: left  .25s ease-in-out;
+      transition: left .25s ease-in-out;
     }
   }
 
@@ -151,7 +162,9 @@ nav {
       float: none;
       width: 100%;
       text-align: center;
-      margin-top: 60px;
+      // margin-top: 100px;
+      margin-top: 40vh;
+      transform: translate(0, -50%);
     }
 
     li {
@@ -206,7 +219,12 @@ nav {
   transform: translate(-50%, -50%);
 
   @include media("<=tablet") {
-    width: fit-content;
+    // width: fit-content;
+    width: 276px;
+  }
+
+  a {
+    display: inline-block;
   }
 
   .logo {
@@ -236,7 +254,8 @@ nav {
     height: 128px;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     background-position: right center;
   }
 }
@@ -282,6 +301,7 @@ nav {
   }
   @include media("<=phone") {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -334,7 +354,7 @@ nav {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(/img/me.jpg);
@@ -369,6 +389,19 @@ nav {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .heart {
+    width: 28px;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/img/icons/heart.png);
+  }
 }
 
 $network-link: be dribbble insta fb gmail;
@@ -381,14 +414,14 @@ $network-link: be dribbble insta fb gmail;
     }
 
     & > div {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       background-size: cover;
       background-repeat: no-repeat;
 
       @include media("<=phone") {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
       }
     }
   }
@@ -396,13 +429,23 @@ $network-link: be dribbble insta fb gmail;
   .icon-#{$network} {
     & > div {
       background-image: url(/img/icons/#{$network}_atlas.png);
-      background-position: left center;
+      background-position: right center;
     }
     &:hover {
       & > div {
-        background-position: right center;
+        background-position: left center;
         // background-image: url(/img/icons/#{$network}_black.png);
       }
     }
   }
+}
+
+footer {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  text-align: right;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666;
 }
