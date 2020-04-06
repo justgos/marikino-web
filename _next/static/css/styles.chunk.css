@@ -51,9 +51,16 @@ nav {
         width: 40px;
         height: 40px;
         background-size: contain;
+        background-position: center center;
         background-repeat: no-repeat;
         cursor: pointer;
-        -webkit-tap-highlight-color: transparent; } }
+        -webkit-tap-highlight-color: transparent; }
+        nav .open-nav:hover,
+        nav .close-nav:hover {
+          background-size: 90%; }
+        nav .open-nav:active,
+        nav .close-nav:active {
+          background-size: 80%; } }
   nav .open-nav {
     background-image: url(/img/icons/menu.png); }
   nav .close-nav {
@@ -75,12 +82,17 @@ nav {
     height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
     background-image: url(/img/elements/logo.png); }
     @media (max-width: 1200px) {
       nav .logo {
         position: relative;
-        left: 10px;
+        left: 20px;
         top: 10px; } }
+    nav .logo:hover {
+      background-size: 90%; }
+    nav .logo:active {
+      background-size: 80%; }
   nav .floater {
     position: fixed;
     left: calc(50vw - 580px - 90px); }
@@ -160,11 +172,17 @@ nav {
     width: 128px;
     height: 41px;
     background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     background-image: url(/img/elements/logo.png); }
+    .eye-container .logo:hover {
+      background-size: 90%; }
+    .eye-container .logo:active {
+      background-size: 80%; }
 
 .eye-raster,
 .eye-vector {
+  position: relative;
   display: inline-block;
   width: 256px;
   height: 256px;
@@ -180,6 +198,14 @@ nav {
   .eye-vector:hover,
   .eye-vector.active {
     background-position: right center; }
+  .eye-raster .hint,
+  .eye-vector .hint {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    font-weight: 300;
+    font-size: 18px;
+    transform: translate(-50%, 0); }
 
 .eye-raster {
   background-image: url(/img/elements/raster_eye_atlas.png); }
