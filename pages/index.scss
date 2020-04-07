@@ -70,9 +70,18 @@ nav {
       // background-color: #000;
       // border-radius: 100%;
       background-size: contain;
+      background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
+
+      
+      &:hover {
+        background-size: 90%;
+      }
+      &:active {
+        background-size: 80%;
+      }
     }
   }
   .open-nav {
@@ -96,20 +105,28 @@ nav {
   .logo {
     display: inline-block;
     position: absolute;
-    left: -90px;
+    left: -94px;
     top: 20px;
-    width: 128px;
+    width: 124px;
     height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
     background-image: url(/img/elements/logo.png);
 
     @include media("<=tablet") {
       position: relative;
-      left: 10px;
+      left: 20px;
       top: 10px;
       // margin-left: 10px;
       // margin-top: 10px;
+    }
+
+    &:hover {
+      background-size: 90%;
+    }
+    &:active {
+      background-size: 80%;
     }
   }
 
@@ -235,13 +252,22 @@ nav {
     width: 128px;
     height: 41px;
     background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     background-image: url(/img/elements/logo.png);
+
+    &:hover {
+      background-size: 90%;
+    }
+    &:active {
+      background-size: 80%;
+    }
   }
 }
 
 .eye-raster,
 .eye-vector {
+  position: relative;
   display: inline-block;
   width: 256px;
   height: 256px;
@@ -257,6 +283,15 @@ nav {
   &:hover,
   &.active {
     background-position: right center;
+  }
+
+  .hint {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    font-weight: 300;
+    font-size: 18px;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -366,7 +401,7 @@ nav {
 }
 
 .social-icons {
-  width: fit-content;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
