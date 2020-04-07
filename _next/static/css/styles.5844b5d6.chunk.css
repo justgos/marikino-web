@@ -76,9 +76,9 @@ nav {
   nav .logo {
     display: inline-block;
     position: absolute;
-    left: -90px;
+    left: -94px;
     top: 20px;
-    width: 128px;
+    width: 124px;
     height: 41px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@ nav {
       height: 256px; } }
 
 .social-icons {
-  width: fit-content;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px; }
@@ -424,5 +424,3 @@ footer {
   font-size: 14px;
   color: #666; }
 
-
-/*# sourceMappingURL=styles.chunk.css.map*/
