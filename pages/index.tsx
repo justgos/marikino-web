@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { jsx, css } from '@emotion/core';
 
 import './index.scss';
 import Header from '../components/Header';
@@ -90,6 +91,8 @@ const IndexPage = () => {
     };
   }, []);
   // console.log('eyeState', eyeState)
+
+  // console.log('window.DeviceMotionEvent', typeof window !== 'undefined' && window.DeviceMotionEvent)
   
   return (
     <>
@@ -103,12 +106,38 @@ const IndexPage = () => {
           <Link href="/raster"><a>
             <div
               className={classNames("eye-raster", { active: eyeState.left })}
-            />
+            >
+              <div
+                className="hint"
+                css={css`
+                  display: none;
+
+                  @media (max-width: 1200px) {
+                    // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
+                  }
+                `}
+              >
+                raster
+              </div>
+            </div>
           </a></Link>
           <Link href="/vector"><a>
             <div
               className={classNames("eye-vector", { active: eyeState.right })}
-            />
+            >
+              <div
+                className="hint"
+                css={css`
+                  display: none;
+
+                  @media (max-width: 1200px) {
+                    // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
+                  }
+                `}
+              >
+                vector
+              </div>
+            </div>
           </a></Link>
         </div>
       </div>
