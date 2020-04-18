@@ -76,7 +76,7 @@ nav {
   nav .logo {
     display: inline-block;
     position: absolute;
-    left: -94px;
+    left: -90px;
     top: 20px;
     width: 124px;
     height: 41px;
@@ -424,3 +424,5 @@ footer {
   font-size: 14px;
   color: #666; }
 
+
+/*# sourceMappingURL=styles.chunk.css.map*/
