@@ -19,7 +19,7 @@
     "classnames": "^2.2.6",
     "include-media": "^1.4.9",
     "isomorphic-unfetch": "3.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "next": "latest",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
