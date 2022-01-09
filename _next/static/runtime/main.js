@@ -505,7 +505,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/mnt/c/_code/marikino-web/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/d/_code/marikino-web/.next");
       return error;
     }
   };
