@@ -273,7 +273,7 @@ nav {
   height: 256px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: right center;
 
   @include media("<=tablet") {
     width: 128px;
@@ -282,7 +282,7 @@ nav {
 
   &:hover,
   &.active {
-    background-position: right center;
+    background-position: left center;
   }
 
   .hint {
