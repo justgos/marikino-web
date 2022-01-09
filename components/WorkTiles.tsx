@@ -39,7 +39,7 @@ const WorkTiles = ({ rootPath, works, aspectRatioPerRow = 3.0 } : Props) => {
       aspectRatio: w.size[0] / w.size[1],
       idx: -1,
       width: {},
-      path: rootPath + w.path,
+      path: rootPath + encodeURI(w.path),
     })),
     [rootPath, works]
   );
