@@ -76,7 +76,7 @@ nav {
   nav .logo {
     display: inline-block;
     position: absolute;
-    left: -90px;
+    left: -94px;
     top: 20px;
     width: 124px;
     height: 41px;
@@ -188,7 +188,7 @@ nav {
   height: 256px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center; }
+  background-position: right center; }
   @media (max-width: 1200px) {
     .eye-raster,
     .eye-vector {
@@ -197,7 +197,7 @@ nav {
   .eye-raster:hover, .eye-raster.active,
   .eye-vector:hover,
   .eye-vector.active {
-    background-position: right center; }
+    background-position: left center; }
   .eye-raster .hint,
   .eye-vector .hint {
     position: absolute;
