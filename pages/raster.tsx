@@ -27,7 +27,7 @@ const RasterPage = () => {
     { path: 'Christmas_Dinner_.jpg.jpg', size: [ 1536, 1024 ] },
     { path: 'Flowerlady.jpg', size: [ 717, 1024 ] },
     { path: 'Good_wine-fish.jpg', size: [ 1536, 1024 ] },
-    { path: 'Haku_Animalistic.jpg', size: [ 1024, 1024 ] },
+    { path: 'HakuAnimalistic.gif', size: [ 1024, 1024 ] },
     { path: 'Masha.jpg.jpg', size: [ 1024, 1024 ] },
     { path: 'My_Inner.jpg.jpg', size: [ 1024, 1024 ] },
     { path: 'Silpo-_test.jpg', size: [ 1536, 1024 ] },
