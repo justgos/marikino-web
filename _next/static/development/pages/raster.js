@@ -7937,7 +7937,7 @@ var RasterPage = function RasterPage() {
     path: 'Good_wine-fish.jpg',
     size: [1536, 1024]
   }, {
-    path: 'Haku_Animalistic.jpg',
+    path: 'HakuAnimalistic.gif',
     size: [1024, 1024]
   }, {
     path: 'Masha.jpg.jpg',
@@ -8083,7 +8083,7 @@ var RasterPage = function RasterPage() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 1:
 /*!***********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fraster&absolutePagePath=%2Fd%2F_code%2Fmarikino-web%2Fpages%2Fraster.tsx ***!
   \***********************************************************************************************************************/
@@ -8106,5 +8106,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=raster.js.map

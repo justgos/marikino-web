@@ -7892,6 +7892,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var VectorPage = function VectorPage() {
   var works = [{
+    path: 'amnesty.gif',
+    size: [1024, 1024]
+  }, {
     path: 'Chile_Wine.jpg',
     size: [1536, 1024]
   }, {
@@ -7962,7 +7965,7 @@ var VectorPage = function VectorPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 7
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -7970,7 +7973,7 @@ var VectorPage = function VectorPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 44,
       columnNumber: 7
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_components_WorkTiles__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -7979,14 +7982,14 @@ var VectorPage = function VectorPage() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 7
     }
   }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 7
     }
   }));
