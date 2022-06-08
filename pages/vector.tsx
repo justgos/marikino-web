@@ -19,7 +19,7 @@ const VectorPage = () => {
     { path: 'Screenshot 2021-03-09 at 10.21.54.jpg', size: [ 1096, 1024 ] },
     { path: 'Screenshot 2021-11-14 at 21.24.59.jpg', size: [ 1024, 1024 ] },
     { path: 'Serfer_1.jpg', size: [ 1024, 1024 ] },
-    { path: 'maccafe-4.jpg', size: [ 1024, 1024 ] },
+    { path: 'maccafe.gif', size: [ 1024, 1024 ] },
 
     { path: 'babushka.jpg', size: [ 2000, 2000 ] },
     { path: 'city_2colors.jpg', size: [ 2000, 1500 ] },
