@@ -17,7 +17,7 @@ const Nav = ({ page } : Props) => {
   const menuItems = [
     { value: 'raster', label: 'raster' },
     { value: 'vector', label: 'vector' },
-    // { value: 'sketch', label: 'sketch' },
+    { value: 'sketch', label: 'sketch' },
     { value: 'me', label: 'me' },
   ];
 

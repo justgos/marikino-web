@@ -20,7 +20,7 @@ const RasterPage = () => {
     { path: 'BEER-IPA.jpg', size: [ 1536, 1024 ] },
     { path: 'Blossom.jpg', size: [ 1024, 1024 ] },
     { path: 'Christmas_.jpg', size: [ 1024, 1024 ] },
-    { path: 'Christmas.jpg', size: [ 1024, 1024 ] },
+    { path: 'Christmasanimation.gif', size: [ 1024, 1024 ] },
     { path: 'Dinner-september.jpg', size: [ 1536, 1024 ] },
     { path: 'Coffee.jpg', size: [ 717, 1024 ] },
     { path: 'Degustation-may.jpg', size: [ 1536, 1024 ] },
