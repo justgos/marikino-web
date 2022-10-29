@@ -3,7 +3,6 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import { jsx, css } from '@emotion/core';
 
-import './index.scss';
 import Header from '../components/Header';
 
 const IndexPage = () => {
@@ -94,55 +93,53 @@ const IndexPage = () => {
 
   // console.log('window.DeviceMotionEvent', typeof window !== 'undefined' && window.DeviceMotionEvent)
   
-  return (
-    <>
-      <Header />
-      <div className="index-container">
-        <div className="eye-container">
-          <Link href="/me"><a>
-            <div className="logo" />
-          </a></Link>
+  return <>
+    <Header />
+    <div className="index-container">
+      <div className="eye-container">
+        <Link href="/me" legacyBehavior>
+          <div className="logo" />
+        </Link>
 
-          <Link href="/raster"><a>
+        <Link href="/raster" legacyBehavior>
+          <div
+            className={classNames("eye-raster", { active: eyeState.left })}
+          >
             <div
-              className={classNames("eye-raster", { active: eyeState.left })}
-            >
-              <div
-                className="hint"
-                css={css`
-                  display: none;
+              className="hint"
+              css={css`
+                display: none;
 
-                  @media (max-width: 1200px) {
-                    // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
-                  }
-                `}
-              >
-                raster
-              </div>
+                @media (max-width: 1200px) {
+                  // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
+                }
+              `}
+            >
+              raster
             </div>
-          </a></Link>
-          <Link href="/vector"><a>
+          </div>
+        </Link>
+        <Link href="/vector" legacyBehavior>
+          <div
+            className={classNames("eye-vector", { active: eyeState.right })}
+          >
             <div
-              className={classNames("eye-vector", { active: eyeState.right })}
-            >
-              <div
-                className="hint"
-                css={css`
-                  display: none;
+              className="hint"
+              css={css`
+                display: none;
 
-                  @media (max-width: 1200px) {
-                    // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
-                  }
-                `}
-              >
-                vector
-              </div>
+                @media (max-width: 1200px) {
+                  // display: ${(typeof window !== 'undefined' && window.DeviceMotionEvent) ? 'none' : 'block'};
+                }
+              `}
+            >
+              vector
             </div>
-          </a></Link>
-        </div>
+          </div>
+        </Link>
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 
 export default IndexPage;
