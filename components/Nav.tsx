@@ -44,42 +44,42 @@ const Nav = ({ page } : Props) => {
     };
   }, [distTop]);
 
-  return (
-    <>
-      <nav className={classNames({ open })}>
-        <div className="container">      
-          <div className="open-nav" onClick={evt => setOpen(!open)} />
+  return <>
+    <nav className={classNames({ open })}>
+      <div className="container">      
+        <div className="open-nav" onClick={evt => setOpen(!open)} />
 
-          <Link href={`/`}>
-            <a><div className="logo" /></a>
-          </Link>
+        <Link href={`/`}>
+          <div className="logo" />
+        </Link>
 
-          <div
-            className={classNames("floater")}
-            css={css`
-              top: ${distTop}px;
+        <div
+          className={classNames("floater")}
+          css={css`
+            top: ${distTop}px;
 
-              @include media("<=tablet") {
-                top: 0;
-              }
-            `}
-          >
-            <div className="close-nav" onClick={evt => setOpen(!open)} />
-            
-            <ul>
-              {menuItems.map((item, i) =>
-                <li key={i}>
-                  <Link href={`/${item.value}`}>
-                    <a className={classNames({ active: item.value === page })}><span>{item.label}</span></a>
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </div>
+            @include media("<=tablet") {
+              top: 0;
+            }
+          `}
+        >
+          <div className="close-nav" onClick={evt => setOpen(!open)} />
+          
+          <ul>
+            {menuItems.map((item, i) =>
+              <li key={i}>
+                <Link
+                  href={`/${item.value}`}
+                  className={classNames({ active: item.value === page })}>
+                  <span>{item.label}</span>
+                </Link>
+              </li>
+            )}
+          </ul>
         </div>
-      </nav>
-    </>
-  );
+      </div>
+    </nav>
+  </>;
 };
 
 export default Nav;

@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import { jsx, css } from '@emotion/core';
 
-import './index.scss';
 import Nav from '../components/Nav';
 import Header from '../components/Header';
 
