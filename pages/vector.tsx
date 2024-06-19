@@ -11,6 +11,8 @@ import Footer from '../components/Footer';
 
 const VectorPage = () => {
   const works = [
+    { path: 'Marikino-decolonization_.jpg', size: [ 1434, 1024 ] },
+    
     { path: 'amnesty.gif', size: [ 1024, 1024 ] },
     { path: 'Chile_Wine.jpg', size: [ 1536, 1024 ] },
     { path: 'Dinner_Party.jpg', size: [ 1532, 1024 ] },

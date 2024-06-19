@@ -11,6 +11,14 @@ import Footer from '../components/Footer';
 
 const SketchPage = () => {
   const works = [
+    { path: 'Chernihiv.jpg', size: [ 1024, 1024 ] },
+    { path: 'cornflower.jpg', size: [ 1024, 1024 ] },
+    { path: 'Kryvyi.jpg', size: [ 1608, 1024 ] },
+    { path: 'Kyiv2.jpg', size: [ 1466, 1024 ] },
+    { path: 'Pavlograd-2.jpg', size: [ 1466, 1024 ] },
+    { path: 'Sketch.jpg', size: [ 1301, 1024 ] },
+    { path: 'mari_kinovych_save_dogs.jpg', size: [ 726, 1024 ] },
+
     { path: '2020symbol.jpg', size: [ 1024, 1024 ] },
     { path: 'Braces.jpg', size: [ 1024, 1024 ] },
     { path: 'Hakusketch.jpg', size: [ 1024, 1024 ] },
