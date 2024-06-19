@@ -19,22 +19,22 @@ const AboutPage = () => {
         <div className="social-icons">
           <a href="https://www.behance.net/marikino" target="_blank" rel="noopener noreferrer" className="icon-be"><div /></a>
           <a href="https://www.instagram.com/marikinoo/" target="_blank" rel="noopener noreferrer" className="icon-insta"><div /></a>
-          <a href="https://dribbble.com/marikino" target="_blank" rel="noopener noreferrer" className="icon-dribbble"><div /></a>
-          <a href="https://www.facebook.com/mari.kinovych" target="_blank" rel="noopener noreferrer" className="icon-fb"><div /></a>
           <a href="mailto:kinovych@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-gmail"><div /></a>
         </div>
 
         <div className="bio">
-          Hi! My name is Mari Kinovych,<br/>
-          I live and work in Kyiv, Ukraine and this website is my attempt to become a proper freelancer. <br/>
+          Hi! <br/>
+          My name is Mari Kinovych<br/>
+          and I live and work in Kyiv, Ukraine. <br/>
           <br/>
-          I love to be an illustrator because of this kind of freedom when you can be different with every new illustration, but also I love some boring technical tasks where you don't need to be creative.<br/>
+          I enjoy being an illustrator because of the freedom it offers to rediscover oneself with each new illustration. At the same time, I appreciate the occasional technical tasks that may seem mundane but don't require creativity.<br/>
           <br/>
-          I work with different clients and tasks due to my wide experience: from lettering to illustrations for explainer videos. But my all-time favorites are illustrations for some editorial/social media purposes and books. <br/>
+          I work with different clients and tasks due to my wide experience: from advertising to comic. But my all-time favorites are illustrations for some editorial/social media purposes and book covers. 
+          After the full-scale invasion of Russia, I devoted the majority of my creative energy to depicting my wartime experiences. Today, I find that projects centered around war-related topics are the most fulfilling for me.<br/>
           <br/>
-          Here I gather only a small part of my works but show more process and commercial cases on my Behance page.<br/>
+          Here I gather only a small part of my works but show more on my Instagram page. Some of my clients include: The Economist, The Guardian Weekly, Adweek, Republic, New Statesman, Liberation, MacPaw, Facebook, Harvard Ukrainian Research Institute, Penguin Random House, UN Women ECA, Heinrich Böll Stiftung, Academic Boston Study Press. <br/>
           <br/>
-          Besides work, I have a lot of fun with my dog, like to cook (but not every day), do yoga, plant my balcony with succulents and find pleasure in watching paintings of Old Masters. I spend too much time on social media and want to practice more analog graphics.<br/>
+          Apart from work, I enjoy spending time with my dog, cooking (though not daily), practicing yoga, tending to my balcony garden, and devoting my free time to tapestry making. I spend too much time on social media (who doesn't) and want to practice more analog graphics.<br/>
           <br/>
           Hope you are enjoying my illustration space!<br/>
           <br/>

@@ -18,6 +18,7 @@ const Nav = ({ page } : Props) => {
     { value: 'raster', label: 'raster' },
     { value: 'vector', label: 'vector' },
     { value: 'sketch', label: 'sketch' },
+    { value: 'comic', label: 'comic' },
     { value: 'me', label: 'me' },
   ];
 

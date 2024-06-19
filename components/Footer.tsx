@@ -12,7 +12,7 @@ const Footer = ({  } : Props) => {
     <>
       <footer>
         <div className="container">
-          &copy; Copyright 2022, Mari Kinovych. All rights reserved
+          &copy; Copyright 2024, Mari Kinovych. All rights reserved
         </div>
       </footer>
     </>
