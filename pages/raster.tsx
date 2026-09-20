@@ -11,6 +11,24 @@ import Footer from '../components/Footer';
 
 const RasterPage = () => {
   const works = [
+    { path: 'Uklon2-2.jpg', size: [ 796, 1024 ] },
+    { path: 'October_25.jpg', size: [ 1453, 1024 ] },
+    { path: 'January_26.jpg', size: [ 1379, 1024 ] },
+    { path: 'July26.jpg', size: [ 1344, 1024 ] },
+    { path: 'Ukrainian_spaces_2026.jpg', size: [ 1024, 1024 ] },
+    { path: 'KI-Zla-mavka_final.jpg', size: [ 1517, 1024 ] },
+    { path: 'suit_situation.jpg', size: [ 794, 1024 ] },
+    { path: 'June_26.jpg', size: [ 1453, 1024 ] },
+    { path: 'Voloshka_.jpg', size: [ 1024, 1024 ] },
+    { path: 'June2025.jpg', size: [ 1453, 1024 ] },
+    { path: '_season_5_.jpg', size: [ 1024, 1024 ] },
+    { path: 'July_25.jpg', size: [ 1453, 1024 ] },
+    { path: 'Bear_Your_Freedom.jpg', size: [ 762, 1024 ] },
+    { path: 'December_25.jpg', size: [ 1453, 1024 ] },
+    { path: 'August_2025.jpg', size: [ 1453, 1024 ] },
+    { path: 'October26.jpg', size: [ 1453, 1024 ] },
+    { path: 'Greener.jpg', size: [ 1404, 1024 ] },
+
     { path: '8march.jpg.jpg', size: [ 1024, 1024 ] },
     
     // { path: 'waking_up.jpg', size: [ 724, 1024 ] },

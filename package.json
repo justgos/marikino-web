@@ -7,7 +7,7 @@
     "start": "next start",
     "type-check": "tsc",
     "predeploy": "next build && next export && touch out/.nojekyll && echo 'marikino.art' > out/CNAME",
-    "deploy": "gh-pages -d out -t true"
+    "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@babel/core": "^7.19.6",

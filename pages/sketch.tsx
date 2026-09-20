@@ -11,6 +11,15 @@ import Footer from '../components/Footer';
 
 const SketchPage = () => {
   const works = [
+    { path: 'Creativity loop.gif', size: [ 1024, 1024 ] },
+    { path: 'Laptop.jpg', size: [ 1024, 1024 ] },
+
+    { path: 'Klumba.jpg', size: [ 1151, 1024 ] },
+    { path: 'spring_воу.jpg', size: [ 832, 1024 ] },
+    { path: 'Procrastination_.jpg', size: [ 1012, 1024 ] },
+    { path: 'KI-newsroom_Final.jpg', size: [ 1422, 1024 ] },
+    { path: 'Sense.jpg', size: [ 1024, 1024 ] },
+
     { path: 'Chernihiv.jpg', size: [ 1024, 1024 ] },
     { path: 'cornflower.jpg', size: [ 1024, 1024 ] },
     { path: 'Kryvyi.jpg', size: [ 1608, 1024 ] },
